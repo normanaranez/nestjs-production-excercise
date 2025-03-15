@@ -3,7 +3,7 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "test2@test.com",
+  "email": "test23@test.com",
   "password": "123456"
 }
 
@@ -14,4 +14,21 @@ GET http://localhost:3000/auth/1
 GET http://localhost:3000/auth?email=test@test.com
 
 # DELETE user by id
-DELETE http://localhost:3000/auth/1
+DELETE http://localhost:3000/auth/2
+
+# update user by id
+PATCH http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+  "password": "sdfsdf"
+}
+
+# login 
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "example@test.com",
+  "password": "12323"
+}
