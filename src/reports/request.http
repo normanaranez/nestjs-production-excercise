@@ -1,12 +1,21 @@
+# Create a new report
 POST http://localhost:3000/reports
 Content-Type: application/json
 
 {
     "make": "Toyota",
     "model": "Corolla",
-    "year": 2015,
+    "year": 2025,
     "price": 10000,
     "mileage": 50000,
     "lng": -122.084,
     "lat": 37.422
+}
+
+# approve the report
+PATCH http://localhost:3000/reports/1
+Content-Type: application/json
+
+{
+    "approved": false
 }
