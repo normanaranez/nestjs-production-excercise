@@ -17,5 +17,8 @@ PATCH http://localhost:3000/reports/1
 Content-Type: application/json
 
 {
-    "approved": false
+    "approved": true
 }
+
+# get an estimate for an existing vehicle
+GET http://localhost:3000/reports?make=Toyota&model=Corolla&year=2025&lng=-122.084&lat=37.422&mileage=50000
