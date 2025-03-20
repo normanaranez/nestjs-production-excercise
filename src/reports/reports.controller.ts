@@ -39,7 +39,7 @@ export class ReportsController {
 
   @Get()
   getEstimate(@Query() query: GetEstimateDto) {
-    console.log(query);
+    return this.reportService.createEstimate(query);
   }
   // @Patch('/:id')
   // updateReport(@Param('id') id: string, @Body() body: UpdateReportDto) {
